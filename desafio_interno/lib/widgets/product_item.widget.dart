@@ -30,7 +30,7 @@ class ProductItem extends StatelessWidget {
                   color: Colors.grey[200],
                   child: Image.asset(
                     "assets/iphone.png",
-                    key: const Key("productImage"),
+                    key: const ValueKey("image_product_item"),
                   ),
                 ),
               ),
@@ -108,7 +108,7 @@ class ProductItem extends StatelessWidget {
                     Align(
                       alignment: Alignment.centerRight,
                       child: GestureDetector(
-                        key: const Key("addProductToCart"),
+                        key: const ValueKey("btn_add_product_to_cart"),
                         onTap: () {
                           final store = GetIt.I.get<ShoppingCartStore>();
                           final result = store.addProduct(product);

@@ -13,7 +13,7 @@ class ShoppingCartPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.yellow[600],
         leading: BackButton(
-          key: const Key("backBtn"),
+          key: const ValueKey('btn_back'),
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: const Text("Carrinho de compras"),
@@ -23,7 +23,7 @@ class ShoppingCartPage extends StatelessWidget {
               child: Image.asset(
                 "assets/empty_cart.png",
                 height: 200,
-                key: const Key("imageCart"),
+                key: const ValueKey("image_cart"),
               ),
             )
           : ListView.builder(
